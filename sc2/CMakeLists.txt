@@ -22,7 +22,7 @@ set(CONTENTDIR "/userdata/roms/uqm")
 set(USERDIR "/userdata/saves/uqm")
 
 configure_file(${PROJECT_SOURCE_DIR}/src/config_cmake.h.in
-               ${PROJECT_BINARY_DIR}/src/config_cmake.h)
+               ${PROJECT_BINARY_DIR}/src/config_cmake.h @ONLY)
 
 add_definitions(-DCMAKE -DGFXMODULE_SDL -DUSE_INTERNAL_MIKMOD -DTHREADLIB_SDL -DHAVE_JOYSTICK -DHAVE_ZIP=1)
 if(NETPLAY)
